@@ -9,3 +9,25 @@ docker run -d --name minio \
   -v minio_data:/data \
   minio/minio server --console-address ":9090" /data
 ```
+---
+## Run Your Spring boot application 
+```
+localhost:8080
+```
+### Upload a File
+```
+curl -X POST -F "file=@sample.txt" http://localhost:8080/s3/upload
+```
+
+### List Files
+```
+curl -X GET http://localhost:8080/s3/list
+```
+### Download a File
+```
+curl -X GET http://localhost:8080/s3/download/sample.txt --output downloaded.txt
+```
+### Delete a File
+```
+curl -X DELETE http://localhost:8080/s3/delete/sample.txt
+```
