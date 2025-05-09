@@ -47,7 +47,7 @@ public class S3Service {
                 .collect(Collectors.toList());
     }
 
-    public void deleteFile(String fileName) {
+    public void deleteFile(String fileName, String s = null) {
         s3Client.deleteObject(DeleteObjectRequest.builder()
                 .bucket(bucketName)
                 .key(fileName)
