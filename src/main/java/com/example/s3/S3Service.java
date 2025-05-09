@@ -48,7 +48,7 @@ public class S3Service {
     }
 
     public void deleteFile(String fileName) {
-    System.out.println("Deleting file from main branch...");
+    System.out.println("Deleting file from why branch...");
     s3Client.deleteObject(DeleteObjectRequest.builder()
             .bucket(bucketName)
             .key(fileName)
