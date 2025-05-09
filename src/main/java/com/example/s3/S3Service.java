@@ -47,10 +47,10 @@ public class S3Service {
                 .collect(Collectors.toList());
     }
 
-    public void deleteFile(String fileName) {
+    public void deleteFile(String filename) {
         s3Client.deleteObject(DeleteObjectRequest.builder()
                 .bucket(bucketName)
-                .key(fileName)
+                .key(filename)
                 .build());
     }
 }
